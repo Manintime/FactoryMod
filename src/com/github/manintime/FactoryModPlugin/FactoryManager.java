@@ -1,4 +1,6 @@
-package com.github.manintime.FactoryMod;
+package com.github.manintime.FactoryModPlugin;
+
+import java.util.List;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -6,18 +8,23 @@ import org.bukkit.event.Listener;
 import com.github.manintime.*;
 
 public class FactoryManager {
-	FactoryMod plugin; //The plugin object
+	List<Listener> listeners;
+	List<Manager> managers;
+	
+	FactoryModPlugin plugin; //The plugin object
 	
 	public static FactoryManager facMan;
 	
-	public FactoryManager (FactoryMod plugin){
+	public FactoryManager (FactoryModPlugin plugin){
 		this.plugin = plugin;
 		FactoryManager.facMan = this;
 		initialiseFactories();
 		
+		
+		
 	}
 	
-	Private void initialiseFactories(){
+	private void initialiseFactories(){
 		Listener factoryListener = new FactoryListener(facMan);
 		plugin.getServer().getPluginManager().registerEvents(factoryListener, plugin);
 		
