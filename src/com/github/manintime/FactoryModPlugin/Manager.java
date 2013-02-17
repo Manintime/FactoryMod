@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.IOException;
 
 import org.bukkit.Location;
+import org.bukkit.block.Block;
+import org.bukkit.inventory.Inventory;
 
 import com.github.manintime.FactoryModPlugin.InteractionResponse;
 
@@ -36,7 +38,7 @@ public interface Manager
 	/**
 	 * Attempts to create a new machine for this manager
 	 */
-	public InteractionResponse createMachine(Location machineLocation);
+	public InteractionResponse createMachine(MachineType type, Block centralBlock, Block inventoryBlock, Block furnaceBlock);
 
 	/**
 	 * Creates a machine from an existing machine data object

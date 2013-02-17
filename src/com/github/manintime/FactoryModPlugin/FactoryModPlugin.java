@@ -4,7 +4,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import com.github.manintime.*;
 
 public final class FactoryModPlugin extends JavaPlugin{
-	FactoryManager manager;
+	private FactoryManager manager;
 	
 	@Override
 	    public void onEnable(){

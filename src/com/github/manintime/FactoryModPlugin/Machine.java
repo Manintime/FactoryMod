@@ -43,4 +43,10 @@ public interface Machine
 	 * Returns the location of the machine
 	 */
 	public Location getLocation();
+	
+	/**
+	 * Get the type of machine this is.
+	 * @return A machine type
+	 */
+	public MachineType getType();
 }
