@@ -1,5 +1,6 @@
 package com.github.manintime.FactoryModPlugin;
 
+import org.bukkit.block.Block;
 import org.bukkit.inventory.Inventory;
 
 public interface MachineType {
@@ -14,4 +15,6 @@ public interface MachineType {
 	 * @return whether the inventory contains the materials to construct this machine type.
 	 */
 	public boolean containsConstructionMaterials(Inventory inventory);
+	
+	public Machine construct(Block centralBlock, Block inventoryBlock, Block furnaceBlock);
 }
