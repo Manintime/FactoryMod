@@ -40,7 +40,13 @@ public interface Machine
 	public InteractionResponse togglePower();
 	
 	/**
-	 * Returns the location of the machine
+	 * Returns the location of the machine's central block
 	 */
 	public Location getLocation();
+	
+	/**
+	 * Get the type of machine this is.
+	 * @return A machine type
+	 */
+	public MachineType getType();
 }
