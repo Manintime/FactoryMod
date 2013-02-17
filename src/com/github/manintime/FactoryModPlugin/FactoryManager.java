@@ -13,11 +13,8 @@ public class FactoryManager {
 	
 	FactoryModPlugin plugin; //The plugin object
 	
-	public static FactoryManager facMan;
-	
 	public FactoryManager (FactoryModPlugin plugin){
 		this.plugin = plugin;
-		FactoryManager.facMan = this;
 		initialiseFactories();
 		
 		
@@ -25,7 +22,7 @@ public class FactoryManager {
 	}
 	
 	private void initialiseFactories(){
-		Listener factoryListener = new FactoryListener(facMan);
+		Listener factoryListener = new FactoryListener(this);
 		plugin.getServer().getPluginManager().registerEvents(factoryListener, plugin);
 		
 	}
