@@ -17,8 +17,7 @@ import com.github.manintime.FactoryModPlugin.FactoryManager;
 
 
 public class FactoryListener implements Listener{
-
-	FactoryManager factoryMan;
+	private FactoryManager factoryMan;
 	
 	// Constructor
 	public FactoryListener(FactoryManager factoryMan)
